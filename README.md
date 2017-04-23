@@ -21,8 +21,8 @@ Yes
 * Localhost: docker tag aspnetcoreapp:latest eu.gcr.io/pragmatic-byway-163819/aspnetcoreapp
 * Localhost: gcloud docker -- push eu.gcr.io/pragmatic-byway-163819/aspnetcoreapp
 * Configure container instance as follows: https://cloud.google.com/container-optimized-os/docs/how-to/run-container-instance#starting_a_docker_container_via_cloud-config
-Custom metadata
-user-data
+
+Custom metadata - user-data
 ```sh
 #cloud-configs
 
@@ -55,10 +55,12 @@ runcmd:
 ## DI
 ### Castle Windsor
 Not yet: https://github.com/castleproject/Windsor/issues/145
+
 Alternative: https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection.Abstractions/
 ## ORM
 ### NHibernate
 Not yet: https://nhibernate.jira.com/browse/NH-3807
+
 Alternatives: http://stackoverflow.com/a/42503328
 ## Validation
 ### FluentValidation
@@ -67,11 +69,17 @@ Yes: https://github.com/JeremySkinner/FluentValidation
 ## Json support
 ### JSON.Net
 Beta: https://www.nuget.org/packages/CoreCompat.Newtonsoft.Json/
+
 May be native?
 
 ## Logging
 ### log4net
 Yes: https://logging.apache.org/log4net/release/framework-support.html
 
+## Testing
+### NUnit
+Yes
+### RhinoMocks
+Yes
 # Other
 * App config in JSON file, not in web.config: ???
