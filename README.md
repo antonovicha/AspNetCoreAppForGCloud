@@ -54,22 +54,24 @@ runcmd:
 # .NET Core libs
 ## DI
 ### Castle Windsor
-TODO
+Not yet: https://github.com/castleproject/Windsor/issues/145
+Alternative: https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection.Abstractions/
 ## ORM
 ### NHibernate
-TODO
+Not yet: https://nhibernate.jira.com/browse/NH-3807
+Alternatives: http://stackoverflow.com/a/42503328
 ## Validation
 ### FluentValidation
-TODO
+Yes: https://github.com/JeremySkinner/FluentValidation
 
 ## Json support
 ### JSON.Net
-TODO
+Beta: https://www.nuget.org/packages/CoreCompat.Newtonsoft.Json/
 May be native?
 
 ## Logging
 ### log4net
-TODO
+Yes: https://logging.apache.org/log4net/release/framework-support.html
 
 # Other
 * App config in JSON file, not in web.config: ???
