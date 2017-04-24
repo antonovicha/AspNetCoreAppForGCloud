@@ -1,23 +1,31 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using AspNetCoreApp.ValuesDomain;
 
 namespace AspNetCoreApp.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private IValuesService _valuesService;
+
+        public ValuesController(IValuesService valuesService)
+        {
+            _valuesService = valuesService;
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _valuesService.GetAll();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return _valuesService.GetBy(id);
         }
 
         // POST api/values
