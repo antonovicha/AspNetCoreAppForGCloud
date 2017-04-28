@@ -18,8 +18,10 @@ Yes
 ## Google Cloud
 ### Deploy
 * Install https://cloud.google.com/sdk/
+* Build Release of docker-compose project in Visual Studio
 * Localhost: docker tag aspnetcoreapp:latest eu.gcr.io/pragmatic-byway-163819/aspnetcoreapp
 * Localhost: gcloud docker -- push eu.gcr.io/pragmatic-byway-163819/aspnetcoreapp
+* Create new Google Cloud container instance based on `Container-Optimized OS` image
 * Configure container instance as follows: https://cloud.google.com/container-optimized-os/docs/how-to/run-container-instance#starting_a_docker_container_via_cloud-config
 
 Custom metadata - user-data
@@ -50,6 +52,8 @@ runcmd:
 - sleep 5
 - systemctl start cloudservice.service
 ```
+* Run VM instance, it should pickup deployed image and run it
+* Test that app is successfully deployed via `External Ip`/api/values
 
 # .NET Core libs
 ## DI
@@ -57,6 +61,8 @@ runcmd:
 Not yet: https://github.com/castleproject/Windsor/issues/145
 
 Alternative: https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection.Abstractions/
+
+Also Autofac & StructureMap
 ## ORM
 ### NHibernate
 Not yet: https://nhibernate.jira.com/browse/NH-3807
@@ -68,9 +74,7 @@ Yes: https://github.com/JeremySkinner/FluentValidation
 
 ## Json support
 ### JSON.Net
-Beta: https://www.nuget.org/packages/CoreCompat.Newtonsoft.Json/
-
-May be native?
+Yes: https://www.nuget.org/packages/Newtonsoft.Json/ (9.0.1 latest that targets .NET Core 1.0)
 
 ## Logging
 ### log4net
