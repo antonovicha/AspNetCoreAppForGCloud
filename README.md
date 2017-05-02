@@ -74,7 +74,7 @@ Yes: https://github.com/JeremySkinner/FluentValidation
 
 ## Json support
 ### JSON.Net
-Yes: https://www.nuget.org/packages/Newtonsoft.Json/ (9.0.1 latest that targets .NET Core 1.0)
+Yes: https://www.nuget.org/packages/Newtonsoft.Json/
 
 ## Logging
 ### log4net
@@ -87,3 +87,8 @@ Yes
 Yes
 # Other
 * App config in JSON file, not in web.config: ???
+
+# Usefull tools
+## ApiTool
+https://github.com/Microsoft/dotnet-apiport
+Check compatability of .NET application with .NET Standard
