@@ -23,6 +23,7 @@ Yes
 * Localhost: gcloud docker -- push eu.gcr.io/pragmatic-byway-163819/aspnetcoreapp
 * Create new Google Cloud container instance based on `Container-Optimized OS` image
 * Configure container instance as follows: https://cloud.google.com/container-optimized-os/docs/how-to/run-container-instance#starting_a_docker_container_via_cloud-config
+* In order to run newset version of app image you need to manualy remove old one. Run on container instance: docker rm -f %container_id% & docker rmi -f %image_id%_
 
 Custom metadata - user-data
 ```sh
